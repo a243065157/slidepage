@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <style>
         * {
             padding: 0;
@@ -19,6 +20,10 @@
         html, body {
             height: 100%;
             overflow: hidden;
+        }
+        .left{
+            float: left;
+            width: 25%;
         }
 
         #container, .sections, .section {
@@ -61,21 +66,28 @@
     </style>
 </head>
 <body>
-<div id="container">
+<div id="container" style="width: 400%;">
     <div class="sections">
-        <div class="section" id="section0">
+        <div class="section left" id="section0">
             <h3>this is the page</h3>
         </div>
-        <div class="section" id="section1">
+        <div class="section left" id="section1">
             <h3>this is the page</h3>
         </div>
-        <div class="section" id="section2">
+        <div class="section left" id="section2">
             <h3>this is the page</h3>
         </div>
-        <div class="section" id="section3">
+        <div class="section left" id="section3">
             <h3>this is the page</h3>
         </div>
     </div>
 </div>
+<script src="pageswitch.js"></script>
+<script>
+    $("#container").PageSwitch({
+//        配置参数
+    });
+    $("#container").PageSwitch("init");
+</script>
 </body>
 </html>
